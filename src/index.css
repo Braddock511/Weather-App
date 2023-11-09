@@ -1,0 +1,147 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background-color: lightblue;
+  margin: 0;
+  font-family: 'League Spartan', sans-serif;
+}
+
+header{
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 15px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  gap: 15px;
+}
+
+input[type="text"]{
+  width: 400px;
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 20px;
+  border: 2px solid lightgray;
+  box-shadow: 0 0 10px gray;
+  opacity: .8;
+
+}
+
+input[type="text"]:hover{
+  outline: none;
+  opacity: 1;
+}
+
+input[type="text"]:focus{
+  outline: none;
+  opacity: 1;
+}
+
+button{
+  width: 200px;
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 20px;
+  border: 2px solid lightgray;
+  box-shadow: 0 0 10px gray;
+  background-color: white;
+  opacity: .8;
+  cursor: pointer;
+}
+
+button:hover{
+  opacity: 1;
+}
+
+#data{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  background-color: rgb(92, 171, 245);
+  padding: 0 40px 40px 40px;
+  box-shadow: 0 0 10px gray;
+  animation: animation 0.5s ease-out;
+}
+
+#data h1{
+  font-size: 36px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.data-block{
+  font-size: 32px;
+  margin-bottom: 12px;
+  text-align: center;
+  background-color: white;
+  padding: 12px;
+  border-radius: 10px;
+  width: 80%;
+  box-shadow: 0 0 10px lightgray;
+}
+
+@keyframes animation {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+#error h1{
+  font-size: 38px;
+  margin-top: 30px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.8);
+  animation: slideIn 0.5s ease-out;
+}
+
+@media (max-width: 880px) {
+  form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  input[type="text"] {
+    width: 80%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  button {
+    width: 80%;
+  }
+}
+
+@media (max-width: 700px) {
+  h1{
+    font-size: 54px;
+  }
+
+  #data h1{
+    font-size: 30px;
+  }
+
+  .data-block{
+    font-size: 24px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  body{
+    width: 500px;
+  }
+
+  #data {
+    padding: 0 20px;
+  }
+}
